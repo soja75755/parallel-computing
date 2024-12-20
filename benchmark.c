@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "matmul.h"
 
 #define A_ROW 640
@@ -29,7 +28,7 @@ int main(int argc, char **argv)
     params.C.column = C_COLUMN;
     params.C.data_ptr = MAT_C;
 
-    enum IMP_TYPE imp = NAIVE;
+    enum IMP_TYPE imp = UNROLLING;
     evaluate(imp, &params);
 
     return 0;

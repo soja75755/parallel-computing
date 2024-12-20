@@ -40,6 +40,10 @@ void evaluate(enum IMP_TYPE type, const struct matmul_params *params)
         function_name = "naive_mat_mul";
         naive_mat_mul(params);
         break;
+    case UNROLLING:
+        function_name = "unrolling_mat_mul";
+        unrolling_mat_mul(params);
+        break;
     }
     gettimeofday(&end, NULL);
     ms = interval_to_ms(&start, &end);
