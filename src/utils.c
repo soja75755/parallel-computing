@@ -48,6 +48,10 @@ void evaluate(enum IMP_TYPE type, const struct matmul_params *params)
         function_name = "reordering_mat_mul";
         reordering_mat_mul(params);
         break;
+    case TILING:
+        function_name = "tiling_mat_mul";
+        tiling_mat_mul(params);
+        break;
     }
     gettimeofday(&end, NULL);
     ms = interval_to_ms(&start, &end);
