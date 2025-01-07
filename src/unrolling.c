@@ -1,4 +1,5 @@
 #include "matmul.h"
+
 void unrolling_mat_mul(const struct matmul_params *params)
 {
     int i, j, k;

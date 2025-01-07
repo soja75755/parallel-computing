@@ -52,6 +52,10 @@ void evaluate(enum IMP_TYPE type, const struct matmul_params *params)
         function_name = "tiling_mat_mul";
         tiling_mat_mul(params);
         break;
+    case MULTITHREADING:
+        function_name = "multithreading_mat_mul";
+        multithreading_mat_mul(params);
+        break;
     }
     gettimeofday(&end, NULL);
     ms = interval_to_ms(&start, &end);

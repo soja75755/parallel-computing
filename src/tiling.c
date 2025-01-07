@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "matmul.h"
+
 void tiling_mat_mul(const struct matmul_params *params)
 {
     int i, j, k, ti, tj, tk;
