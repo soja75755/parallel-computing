@@ -10,8 +10,11 @@ EXECUTABLES = benchmark
 
 .PHONY: clean
 
-%.o: %.c
+src/utils.o: src/utils.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+%.o: %.c
+	$(CC) $(CFLAGS) -mno-sse $(INCLUDES) -c $< -o $@
 
 all:
 	make clean;
