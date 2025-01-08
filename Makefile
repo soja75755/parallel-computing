@@ -13,6 +13,9 @@ EXECUTABLES = benchmark
 src/utils.o: src/utils.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
+src/simd.o: src/simd.c
+	$(CC) $(CFLAGS) -msse $(INCLUDES) -c $< -o $@
+
 %.o: %.c
 	$(CC) $(CFLAGS) -mno-sse $(INCLUDES) -c $< -o $@
 

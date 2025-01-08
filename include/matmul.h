@@ -22,7 +22,7 @@ struct matmul_params {
 };
 
 // utils
-enum IMP_TYPE { NAIVE, UNROLLING, REORDERING, TILING, MULTITHREADING };
+enum IMP_TYPE { NAIVE, UNROLLING, REORDERING, TILING, MULTITHREADING, SIMD };
 void initialize_matrix(float *M, int size);
 void check_matrices(const struct matrix *A,
                     const struct matrix *B,
@@ -35,3 +35,4 @@ void unrolling_mat_mul(const struct matmul_params *params);
 void reordering_mat_mul(const struct matmul_params *params);
 void tiling_mat_mul(const struct matmul_params *params);
 void multithreading_mat_mul(const struct matmul_params *params);
+void simd_mat_mul(const struct matmul_params *params);
