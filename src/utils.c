@@ -60,6 +60,10 @@ void evaluate(enum IMP_TYPE type, const struct matmul_params *params)
         function_name = "simd_mat_mul";
         simd_mat_mul(params);
         break;
+    case OVERALL:
+        function_name = "overall_mat_mul";
+        overall_mat_mul(params);
+        break;
     }
     gettimeofday(&end, NULL);
     ms = interval_to_ms(&start, &end);

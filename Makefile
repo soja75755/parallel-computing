@@ -16,6 +16,9 @@ src/utils.o: src/utils.c
 src/simd.o: src/simd.c
 	$(CC) $(CFLAGS) -mavx -mfma $(INCLUDES) -c $< -o $@
 
+src/overall.o: src/overall.c
+	$(CC) $(CFLAGS) -mavx -mfma $(INCLUDES) -c $< -o $@
+
 %.o: %.c
 	$(CC) $(CFLAGS) -mno-sse $(INCLUDES) -c $< -o $@
 

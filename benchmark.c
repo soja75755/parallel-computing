@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     params.C.column = C_COLUMN;
     params.C.data_ptr = MAT_C;
 
-    enum IMP_TYPE imp = SIMD;
+    enum IMP_TYPE imp = OVERALL;
     evaluate(imp, &params);
 
     return 0;
