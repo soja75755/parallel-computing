@@ -2,10 +2,10 @@
 Here is an outline of the main files and directories:
 ```ccs
 ├── src
+│   ├── naive.c
 │   ├── unrolling.c
 │   ├── reordering.c
 │   ├── tiling.c
-│   ├── naive.cpp
 │   ├── multithreading.c
 │   ├── simd.c
 │   └── overall.c
